@@ -4,38 +4,83 @@
 }
 
 html, body{
-    background-color: #ccb992;
+    background-image: url(./imagenes2/black.jpg);
+    margin: 5%;
 }
+
 
 .container{
     padding-top: 10px;
-    border: 4px solid rgb(110, 102, 88);
+    border: 4px solid rgb(165, 155, 126);
     border-radius: 50px;
     margin: 2rem;
     padding: 1px;
-    background-color: #eee0b6;
+    background-color: #161615;
     text-align: center;
+    color: #b1a88c;
 }
 
 header, footer{
+    background-color: #b4aa8a;
     border: 2px solid rgb(110, 102, 88);
     margin: 1rem;
     border-radius: 30px;
     padding: 1rem;
     text-align: center;
+    color: rgb(0, 0, 0);
 }
 
-section, article {
+section, article, aside {
+    background-color: #cec4a5;
     border: 2px solid rgb(110, 102, 88);
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
     text-align: left;
+    color: rgb(0, 0, 0);
 }
 
-article{
+article, aside{
     width: 40%;
     display: inline-block;
-    height: 300px;
+    vertical-align: top;
+    height: 100%;
     padding: 1rem;
+    font-size: 17px;
 }
+
+h1{
+    font-family:'Times New Roman', Times, serif;
+}
+
+h2, h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+    font-family: monospace;
+}
+
+
+.img1{
+    border: 2px solid rgb(110, 102, 88);
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+    float: left;
+}
+
+.img2{
+    border: 2px;
+}
+
+#texto{
+    display: inline-block;
+    vertical-align: top;
+    font-size:17px;
+  }
+
+#tamaños{
+    font: ;
+}
+
