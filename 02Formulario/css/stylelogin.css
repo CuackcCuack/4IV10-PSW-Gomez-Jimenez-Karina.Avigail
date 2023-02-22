@@ -3,9 +3,13 @@
     padding: 0;
 }
 
+html{
+    background-image: url(../imágenes/adiosvidaback.jpg);
+}
+
 body{
     background-image: url(../imágenes/fondo.jpg);
-    color: rgb(151, 146, 146);
+    color: rgb(126, 120, 120);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,23 +17,25 @@ body{
 }
 
 .userlogin{
-    background-color: rgb(224, 220, 220);
-    height: 400px;
+    background-color: rgb(207, 207, 207);
+    height: 465px;
     width: 400px;
-    border-radius: 15px solid rgb(255, 135, 201);
+    border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0);;
     margin-top: 10%;
     text-align: center;
 }
 
 .title{
     text-align: center;
-    font-family:sans-serif;
+    font-family:monospace;
     text-transform: uppercase;
     font-size: 13px;
     padding-top: 10px;
-    color: rgb(173, 160, 143);
+    color: rgb(133, 113, 88);
 }
 
+/*
 .userid{
     padding-top: 20px;
 }
@@ -48,53 +54,58 @@ body{
     border: solid 2px rgb(70, 70, 70);
     border-radius: 10px;
 }
+*/
 
-.userpassword{
+.lastnameP, .lastnameM, .user, .userpassword, .userpasswordconfirm, .buttons{
     padding-top: 20px;
 }
 
-.userpassword h1{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.lastnameP h1, .lastnameM h1, .user h1, .userpassword h1, .userpasswordconfirm h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
     float: left;
     margin-left: 50px;
     margin-right: 5px;
     padding-left: 5px;
 }
 
-.userpassword input{
+.lastnameP input, .lastnameM input, .user input, .userpassword input, .userpasswordconfirm input{
     height: 25px;
     width: 300px;
     border: solid 2px rgb(70, 70, 70);
     border-radius: 10px;
 }
 
-.button{
+.buttons{
     margin: 20px;
     display: inline-flex;
 }
 
-.button img{
+.buttons img{
     float:left;
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
 }
 
 .buttons button{
-    border-radius: 15px;
-    width: 120px;
-    height: 35px;
+    border-radius: 30px;
+    width: 140px;
+    height: 50px;
 }
 
 .buttons p{
-    margin-top: 0;
+    margin-top:10px;
     text-align: center;
     text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:monospace;
 }
 
 a{
-    margin-top: 40px;
+    margin-top: 20px;
     float: left;
     margin-left: 120px;
-    color: burlywood;
+    color: rgb(133, 113, 88);
     /*Les dejare una hermosa tarea mediante la cual deben crear
     un formulario de registro que solicite el nombre, appat
     apmat, contraseña y confirmar contraseña
