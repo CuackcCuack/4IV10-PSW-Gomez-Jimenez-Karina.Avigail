@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-image: url(../img/fondo.jpg);
+    background-position: center;
+    background-size: 100%;
+    color:rgb(189, 189, 189);
+}
+
+.form1{
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);;
+    align-content: center;
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 70%;
+}
+
+.form{
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);
+    display:block;
+    align-items: center;
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 70%;
+}
+
+aside{
+    top: 3rem;
+    display: block;
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);
+    margin-right: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 500px;
+    position: absolute;
+    right: 3rem;
+    height: 60%;
+}
+
+.nombre input, .edad input, .correo input, .fecha input{
+    height: 25px;
+    width: 300px;
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+}
+
+.color input{
+    height: 25px;
+    width: 72px;
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+}
+ 
+.buttons input{
+    border-radius: 30px;
+    width: 160px;
+    height: 30px;
+}

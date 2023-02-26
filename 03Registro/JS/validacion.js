@@ -86,22 +86,47 @@ function validar(formulario){
         return false;
     }
 
+    //para la fecha
+    var fechain = document.getElementById("miento");
+    var fecha = fechain.valueAsDate;
+
+    if(!fecha){
+        alert("Ingrese una fecha de nacimiento por favor");
+        formulario.miento.focus();
+        return false;
+    }
+
+    if(fecha.getTime() >= Date.now()){
+        alert("Ingrese una fecha de nacimiento válida por favor")
+        formulario.miento.focus();
+        return false;
+    }
+
+    //Para validar fecha de nacimiento con edad
+    var fechaNac = document.getElementById("miento").value;
+			var fechaNacimientoObj = new Date(fechaNac);
+			var hoy = new Date();
+			var edad = hoy.getFullYear() - fechaNacimientoObj.getFullYear();
+			var mes = hoy.getMonth() - fechaNacimientoObj.getMonth();
+
+			if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimientoObj.getDate())) {
+				edad--;
+			}
+
+			var edadIngresada = parseInt(document.getElementById("edad").value);
+
+			if (edad !== edadIngresada) {
+				alert("La edad ingresada no coincide con la fecha de nacimiento");
+				return false;
+			}
+
     //es para obtener el campo del correo
     var email = formulario.correo.value;
 
     //Vamos a crear una expresión regular
-    var prueba = /([Aa-Zz]+[0-9]+\.){10}\@([Aa-Zz]+[0-9]){8}\.([Aa-Zz]+[0-9]){3}/g;
-    alert("Email "+(prueba.test(email) ? " " : "no ") + "válido");
+    let prueba = /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
+    alert("Email " + (prueba.test(email) ? " " : "no ") + "válido");
     formulario.correo.focus();
     return prueba.test;
 
 }
-
-
-
-
-
-
-
-
-
