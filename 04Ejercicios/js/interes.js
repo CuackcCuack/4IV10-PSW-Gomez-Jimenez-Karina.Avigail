@@ -7,14 +7,29 @@ function validarn(e){
     return patron.test(codigo);
 }
 
-function interes(){
+function interes(formulario){
     var valor = document.getElementById("cantidad").value;
     var resul = parseInt(valor);
 
-    var interes = resul * 0.02;
-    var total = resul + interes;
-
-    document.getElementById("cantidadi").value = "$"+total;
+    if(resul > 0){
+        if(resul <= 1000000000){
+            var interes = resul * 0.02;
+        var total = resul + interes;
+        document.getElementById("cantidadi").value = "$"+total;
+        
+        }
+        else{
+            alert("$"+resul+" es mucho dinero")
+        formulario.cantidad.focus();
+        return false;
+        }
+    }
+    else{
+        alert("No puede invertir $"+resul)
+        formulario.cantidad.focus();
+        return false;
+    }
+    
 }
 
 function borrard(){

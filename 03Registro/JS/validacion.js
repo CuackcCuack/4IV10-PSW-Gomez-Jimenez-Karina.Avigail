@@ -24,7 +24,7 @@ function validar(formulario){
         return false;
     }
 
-    var checarABC = "qwertyuioopsdfghjklñzxcvbnm" + "QWERTYUIOPSDFGHJKLÑZXCVBNM" + "áéíóú" + "ÁÉÍÓÚ";
+    var checarABC = "qwertyuiopasdfghjklñzxcvbnm" + "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "áéíóú" + "ÁÉÍÓÚ";
 
     var cadenaNombre = formulario.nombre.value;
 
@@ -90,8 +90,9 @@ function validar(formulario){
     var email = formulario.correo.value;
 
     //Vamos a crear una expresión regular
-    var prueba = /([Aa - Zz]+[0-9]+\.){10}\@([Aa - Zz]+[0-9]){8}\.([Aa - Zz]+[0-9]){3}/g;
-    alert("Email "+(prueba.test(email) ? " " : "no ") + "válido")
+    var prueba = /([Aa-Zz]+[0-9]+\.){10}\@([Aa-Zz]+[0-9]){8}\.([Aa-Zz]+[0-9]){3}/g;
+    alert("Email "+(prueba.test(email) ? " " : "no ") + "válido");
+    formulario.correo.focus();
     return prueba.test;
 
 }

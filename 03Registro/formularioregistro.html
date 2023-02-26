@@ -15,7 +15,6 @@
         Existen dos métodos principales para la obtención de los datos dentro
         de un formulario web para lo cual aquí lo explicaremos:
     </p>
-<br>
 <h1>GET:</h1> Este método es el estandar como salida del navegador mediante
 el cual se resuelve una petición del cliente, así mismo en la salida estándar
 (url), se puede visualizar los datos enviados mediante el formulario.
@@ -41,14 +40,18 @@ por medio de la salida estándar del navegador.
             <br>
             <label>Fecha de nacimiento: </label>
             <br>
-            <input type="date" name="fecha" id="miento">
+            <input type="date" name="fecha" id="miento" min="1994-01-01" max="2023-12-31">
             <br>
             <label>Email: </label>
             <br>
             <input type="email" name="correo" id="correo">
             <br>
-            <input type="submit" name="enviar" value="Enviar datos del registro">
+            <label>Ingrese su color favorito por favor: </label> 
+            <input type="color" name="color" id="colofav">
             <br>
+            <br>
+            <br>
+            <input type="submit" name="enviar" value="Enviar datos del registro">
             <input type="reset" name="borrar" value="Borrar Datos">
 
             

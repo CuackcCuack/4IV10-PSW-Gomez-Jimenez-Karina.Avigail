@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-image: url(../imagenes/fondo.jpg);
+}
+
+body{
+    align-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgb(226, 215, 198);
+    height:10%;
+    width: 60%;
+    margin-top: 10%;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.table-container{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10%;
+}
+
+input{
+    height: 20px;
+    width: 300px;
+    border: solid 1px rgb(70, 70, 70);
+    border-radius: 10px;
+}
