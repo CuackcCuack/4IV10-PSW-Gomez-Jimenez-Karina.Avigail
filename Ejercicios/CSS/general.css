@@ -77,3 +77,11 @@ aside{
     border-radius: 20px;
     background-color:rgb(150, 150, 150);
 }
+
+.result input{
+    height: 50px;
+    width: 100%;
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+    background-color:rgb(150, 150, 150);
+}

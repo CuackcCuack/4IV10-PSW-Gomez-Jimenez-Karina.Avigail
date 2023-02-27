@@ -213,19 +213,133 @@ function ejercicio5(){
 }
 
 function ejercicio6(){
-    
+    var fechain = document.getElementById("fechaN");
+    var fecha = fechain.valueAsDate;
+
+    if(!fecha){
+        alert("Ingrese una fecha de nacimiento por favor");
+        return false;
+    }
+    else{
+        if(fecha < 01/01/1930){
+            alert("Ingrese una fecha de nacimiento válida por favor, ni que fueras un fósil");
+            return false;
+        }
+        else{
+            if(fecha.getTime() >= Date.now()){
+                alert("Ingrese una fecha de nacimiento válida por favor, sabemos no vienes del futuro");
+                return false;
+            }
+            else{
+                const inputFechaNacimiento = document.getElementById("fechaN").value;
+                const fechaNacimiento = new Date(inputFechaNacimiento);
+                const anioActual = new Date().getFullYear();
+                const anioNacimiento = fechaNacimiento.getFullYear();
+                const edad = anioActual - anioNacimiento;
+                document.getElementById("años").value = ("Su edad es de "+edad+" años.")
+            }
+        }
+    }
 }
 
 function ejercicio7(){
-    
+    var numero1 = document.getElementById("uno").value;
+    var numero2 = document.getElementById("dos").value;
+
+    let lector = /\D/;
+
+    if(lector.test(numero1)){
+        alert("Ingrese una cantidad entera en el primer número");
+        return false;
+    }
+    else{
+        if(lector.test(numero2)){
+            alert("Ingrese una cantidad entera en el segundo número");
+            return false;
+        }
+        else{
+            var val1 = parseInt(numero1);
+            var val2 = parseInt(numero2);
+            if(1000 >= val1 && val1 >= 0){
+                if(1000 >= val2 && val2 >= 0){
+                    if(val1 == val2){
+                        var multiplicacion = val1*val2;
+                        document.getElementById("numeros").value = "Los números son iguales así que se multiplican, resultando así en = "+multiplicacion;
+                    }
+                    else{
+                        if(val1 > val2){
+                            var potencia = val1**val2;
+                            document.getElementById("numeros").value = "El primer número es mayor que el segundo por lo que se potencia el primero a razón del segundo = "+potencia;
+                        }
+                        else{
+                            if(val2 > val1){
+                                var division1 = val2/val1;
+                                var division = parseFloat(division1);
+                                document.getElementById("numeros").value = "El segundo número es máyor al primero, por lo que se divide el segundo a razón del primero = "+division;
+                            }
+                        }
+                    }
+                }
+                else{
+                    alert("Ingrese una cantidad válida para el primer valor")
+                }
+            }
+            else{
+                alert("Ingrese una cantidad válida para el segundo valor")
+            }
+        }
+    }
 }
 
 function ejercicio8(){
-    
+    var numero1 = document.getElementById("num1").value;
+    var numero2 = document.getElementById("num2").value;
+    var numero3 = document.getElementById("num3").value;
+    var val1 = parseFloat(numero1);
+    var val2 = parseFloat(numero2);
+    var val3 = parseFloat(numero3);
+    if(1000 >= val1 && val1 >= 0){
+        if(1000 >= val2 && val2 >= 0){
+            if(1000 >= val3 && val3 >= 0){
+                var mayor = Math.max(val1, val2, val3);
+                document.getElementById("mayor").value = "El número mayor es: " + mayor;
+            }
+            else{
+                alert("Ingrese una cantidad válida para el tercer valor")
+            }
+        }
+        else{
+            alert("Ingrese una cantidad válida para el segundo valor")
+        }
+    }
+    else{
+        alert("Ingrese una cantidad válida para el primer valor")
+    }
 }
 
 function ejercicio9(){
+    var sueldo1 = document.getElementById("sueldo").value;
+    var horas1 = document.getElementById("horas").value;
     
+    let lector = /\D/;
+    if(lector.test(horas1)){
+        alert("Ingrese un número entero de horas por favor")
+    }
+    else{
+        var sueldo = parseFloat(sueldo1);
+        var horas = parseInt(horas1);
+        if(1000000 >= sueldo && sueldo >= 0){
+            if(120 >= horas && horas >= 0){
+                
+            }
+            else{
+                alert("Ingrese una cantidad válida de horas, no creo que lo sobreexploten")
+            }
+        }
+        else{
+            alert("Ingrese una cantidad válida para el sueldo")
+        }
+    }
 }
 
 function ejercicio10(){

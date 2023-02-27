@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
+    <title>Ejercicio 7</title>
     <link rel="stylesheet" href="./CSS/general.css">
     <script src="./JS/validacion.js"></script>
 </head>
-<body background="">
+<body background="./imagenes/fondoej7.jpg">
     <header>
         <nav class="btn-menu">
             <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
@@ -16,7 +16,10 @@
     </header>
     <section class="form1">
         <p>
-            <h1></h1>
+            <h1>Leer 2 numeros; si son iguales que los multiplique, si el primero es 
+                mayor que el segundo que haga una potencia si el segundo es mayor que 
+                el primero que los divida
+            </h1>
         </p>
     </section>
     <section class="form">
@@ -24,29 +27,28 @@
             <div class="conainter-form">
                 <form name="formulario" method="get">
                     <div class="ingreso1">
-                        <label></label> 
+                        <label>Ingrese el primer número: </label> 
                         <br>
-                        <input type="text" id="" onkeypress="">
+                        <input type="number" min="0" max="1000" id="uno" onkeypress="return validarn()">
                         <br>
                     </div>
     
                     <div class="ingreso2">
-                        <label></label>
+                        <label>Ingrese el segundo número:</label>
                         <br>
-                        <input type="text" name="" id="" onkeypress="">
+                        <input type="number" min="0" max="1000" id="dos" onkeypress="return validarn()">
                         <br>
                     </div>
-                    <br>
 
-                    <div class="resultado">
+                    <div class="result">
                         <label> </label>
                         <br>
-                        <input type="text" name="" id="" readonly="readonly">
+                        <input type="text" name="resultado" id="numeros" readonly="readonly">
                     </div>
                     <br>
                     
                     <div class="buttons">
-                        <input type="button" name="" onclick="" value="">
+                        <input type="button" name="calcula" onclick="return ejercicio7()" value="Probar">
                         <input type="reset" name="borrar" value="Borrar Datos">
                     </div>
                 </form>
@@ -54,7 +56,7 @@
         </div>
     </section>
     <aside>
-        <img src="" width="100%">
+        <img src="./imagenes/adornito7.jpg" width="100%">
     </aside>
 </body>
 </html>

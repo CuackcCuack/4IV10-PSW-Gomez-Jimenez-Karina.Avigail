@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
+    <title>Ejercicio 9</title>
     <link rel="stylesheet" href="./CSS/general.css">
     <script src="./JS/validacion.js"></script>
 </head>
@@ -16,7 +16,12 @@
     </header>
     <section class="form1">
         <p>
-            <h1></h1>
+            <h1>Determinar la cantidad de dinero que recibirá un trabajador por concepto de 
+                las horas extras trabajadas en una empresa, sabiendo que cuando las horas de 
+                trabajo exceden de 40, el resto se consideran horas extras y que estas se pagan 
+                al doble de una hora normal cuando no exceden de 8; si las horas extras exceden 
+                de 8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.
+            </h1>
         </p>
     </section>
     <section class="form">
@@ -24,16 +29,16 @@
             <div class="conainter-form">
                 <form name="formulario" method="get">
                     <div class="ingreso1">
-                        <label></label> 
+                        <label>Ingrese el sueldo por hora: </label> 
                         <br>
-                        <input type="text" id="" onkeypress="">
+                        <input type="number" min="0" max="1000000" id="sueldo" onkeypress="return validarn(event)">
                         <br>
                     </div>
     
                     <div class="ingreso2">
-                        <label></label>
+                        <label>Ingese las horas que ha trabajado:</label>
                         <br>
-                        <input type="text" name="" id="" onkeypress="">
+                        <input type="number" min="1" max="120" id="horas" onkeypress="return validarn(event)">
                         <br>
                     </div>
                     <br>
@@ -41,12 +46,12 @@
                     <div class="resultado">
                         <label> </label>
                         <br>
-                        <input type="text" name="" id="" readonly="readonly">
+                        <input type="text" name="resultado" id="salario" readonly="readonly">
                     </div>
                     <br>
                     
                     <div class="buttons">
-                        <input type="button" name="" onclick="" value="">
+                        <input type="button" name="pago" onclick="return ejercicio9()" value="Calcular">
                         <input type="reset" name="borrar" value="Borrar Datos">
                     </div>
                 </form>
