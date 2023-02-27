@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio </title>
+    <title>Ejercicio 5</title>
     <link rel="stylesheet" href="./CSS/general.css">
     <script src="./JS/validacion.js"></script>
 </head>
-<body background="">
+<body background="./imagenes/fondoej5.jpg">
     <header>
         <nav class="btn-menu">
             <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
@@ -16,7 +16,11 @@
     </header>
     <section class="form1">
         <p>
-            <h1></h1>
+            <h1>Un maestro desea saber el porcentaje de hombres y porcentaje de
+                mujeres de un grupo de estudiantes, dicho grupo solamente puede 
+                tener elementos de hombres con un porcentaje, elementos de 
+                mujeres con un porcentaje a partir de ahi obtener el 100%
+            </h1>
         </p>
     </section>
     <section class="form">
@@ -24,29 +28,35 @@
             <div class="conainter-form">
                 <form name="formulario" method="get">
                     <div class="ingreso1">
-                        <label></label> 
+                        <label>Número de mujeres en el grupo:</label> 
                         <br>
-                        <input type="text" id="" onkeypress="">
+                        <input type="number" min="0" max="100" id="muj" onkeypress="return validarn(event)">
                         <br>
                     </div>
     
                     <div class="ingreso2">
-                        <label></label>
+                        <label>Número de hombres en el grupo:</label>
                         <br>
-                        <input type="text" name="" id="" onkeypress="">
+                        <input type="number" min="0" max="100" id="hom" onkeypress="return validarn(event)">
                         <br>
                     </div>
                     <br>
 
                     <div class="resultado">
-                        <label> </label>
-                        <br>
-                        <input type="text" name="" id="" readonly="readonly">
+                        <label>Porcentaje de hombres: </label>
+                        <input type="text" name="resultado" id="porcentaje1" readonly="readonly">
+                    </div>
+                    <div class="resultado">
+                        <label>Porcentaje de mujeres: </label>
+                        <input type="text" name="resultado" id="porcentaje2" readonly="readonly">
+                    </div>
+                    <div class="resultado">
+                        <input type="text" name="resultado" id="porcentajetotal" readonly="readonly">
                     </div>
                     <br>
                     
                     <div class="buttons">
-                        <input type="button" name="" onclick="" value="">
+                        <input type="button" name="resultado" onclick="return ejercicio5()" value="Calcular">
                         <input type="reset" name="borrar" value="Borrar Datos">
                     </div>
                 </form>
@@ -54,7 +64,7 @@
         </div>
     </section>
     <aside>
-        <img src="" width="100%">
+        <img src="./imagenes/adornito5.jpg" width="100%">
     </aside>
 </body>
 </html>

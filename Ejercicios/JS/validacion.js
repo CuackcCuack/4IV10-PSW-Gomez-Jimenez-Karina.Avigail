@@ -122,11 +122,94 @@ function ejercicio3(){
 }
 
 function ejercicio4(){
+    var primer = document.getElementById("primerP").value;
+    var primerP = parseFloat(primer);
+    var segundo = document.getElementById("segundoP").value;
+    var segundoP = parseFloat(segundo);
+    var tercer = document.getElementById("tercerP").value;
+    var tercerP = parseFloat(tercer);
+    var examen = document.getElementById("examen").value;
+    var examenF = parseFloat(examen);
+    var trabajo = document.getElementById("trabajo").value;
+    var trabajoF = parseFloat(trabajo);
 
+    if(10 >= primerP && primerP >= 0){
+        if(10 >= segundoP && segundoP >= 0){
+            if(10 >= tercerP && tercerP >= 0){
+                if(10 >= examenF && examenF >= 0){
+                    if(10 >= trabajoF && trabajoF >= 0){
+                        var promedio1 = (primerP+segundoP+tercerP)/3;
+                        var promedioParciales = promedio1*0.55;
+                        var promedioExamen = examenF*0.30;
+                        var promedioTrabajo = trabajoF*0.15;
+                        var CaliFinal = promedioParciales+promedioExamen+promedioTrabajo;
+                        document.getElementById("calificacionFinal").value = "Tu calificación final es de "+CaliFinal;
+                    }
+                    else{
+                        alert("Ingrese una calificación válida en el trabajo final");
+                        return false;
+                    }
+
+                }
+                else{
+                    alert("Ingrese una calificación válida en el examen final");
+                    return false;
+                }
+            }
+            else{
+                alert("Ingrese una calificación válida en el tercer parcial");
+                return false;
+            }
+        }
+        else{
+            alert("Ingrese una calificación válida en el segundo parcial");
+            return false;
+        }
+    }
+    else{
+        alert("Ingrese una calificación válida en el primer parcial");
+        return false;
+    }
 }
 
 function ejercicio5(){
-    
+    var mujeres = document.getElementById("muj").value;
+    var hombres = document.getElementById("hom").value;
+
+    let lector = /\D/;
+
+    if(lector.test(mujeres)){
+        alert("Ingrese una cantidad entera en el número de mujeres");
+        return false;
+    }
+    else{
+        if(lector.test(hombres)){
+            alert("Ingrese una cantidad válida en el número de hombres");
+            return false;
+        }
+        else{
+            var muj = parseInt(mujeres);
+            var hom = parseInt(hombres);
+            if(100 >= muj && muj >= 0){
+                if(100 >= hom && hom >= 0){
+
+                    var total = muj+hom;
+                    var pormuj = (muj / total)*100;
+                    var porhom = (hom / total)*100;
+                    
+                    document.getElementById("porcentaje1").value = "El porcentaje de hombres es de "+porhom+"%";
+                    document.getElementById("porcentaje2").value = "El porcentaje de mujeres es de "+pormuj+"%";
+                    document.getElementById("porcentajetotal").value = "De un grupo de "+total+" personas";
+                }
+                else{
+                    alert("Ingrese una cantidad válida de hombres")
+                }
+            }
+            else{
+                alert("Ingrese una cantidad válida de mujeres")
+            }
+        }
+    }
 }
 
 function ejercicio6(){

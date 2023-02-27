@@ -62,7 +62,7 @@ aside{
     background-color: rgb(223, 223, 223);
 }
 
-.ingreso1 input, .ingreso2 input, .resultado input, .ingreso3 input{
+.ingreso1 input, .ingreso2 input, .resultado input, .ingreso3 input, .ingreso44 input, .ingreso5 input{
     height: 25px;
     width: 300px;
     border: solid 2px rgb(70, 70, 70);
