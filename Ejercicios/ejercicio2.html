@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script src="./JS/validacion.js"></script>
+</head>
+<body background="./imagenes/fondoej2.jpg">
+    <header>
+        <nav class="btn-menu">
+            <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
+        </nav>
+    </header>
+    <section class="form1">
+        <p>
+            <h1>Un vendedor recibe un sueldo base más un 10% extra por comisión de sus 
+                ventas las cuales son 5 que realiza durante un mes. Así mismo se le 
+                hace un descuento del 12% por concepto de impuesto para lo cual desea 
+                saber el total que recibirá como cobro.
+            </h1>
+        </p>
+    </section>
+    <section class="form">
+        <div class="main-container">
+            <div class="conainter-form">
+                <form name="formulario" method="get">
+                    <div class="ingreso1">
+                        <label>Ingrese su sueldo base: </label> 
+                        <br>
+                        <input type="text" id="sueldo" onkeypress="return validarn(event)">
+                        <br>
+                    </div>
+
+                    <div class="resultado">
+                        <label>Recibirá como cobro:</label>
+                        <br>
+                        <input type="text" name="resultado" id="result" readonly="readonly">
+                    </div>
+                    <br>
+                    
+                    <div class="buttons">
+                        <input type="button" name="calcular" onclick="return ejercicio2()" value="Calcular">
+                        <input type="reset" name="borrar" value="Borrar Datos">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <aside>
+        <img src="./imagenes/adornito2.jpg" width="100%">
+    </aside>
+</body>
+</html>

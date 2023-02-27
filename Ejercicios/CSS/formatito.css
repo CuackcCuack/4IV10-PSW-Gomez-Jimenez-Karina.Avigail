@@ -37,7 +37,6 @@ body{
 }
 
 .container .btn-menu label{
-    color: #fff;
     font-size: 25px;
     cursor: pointer;
 }
@@ -136,4 +135,23 @@ body{
 .iconomenu{
     float: left;
     cursor: pointer;
+}
+
+section{
+    color: #fff;
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);;
+    align-content: center;
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.img3 {
+    margin: 2rem;
+    float: left;
 }

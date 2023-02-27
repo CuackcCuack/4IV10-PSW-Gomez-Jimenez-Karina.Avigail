@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio </title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script src="./JS/validacion.js"></script>
+</head>
+<body background="./imagenes/fondoej3.jpg">
+    <header>
+        <nav class="btn-menu">
+            <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
+        </nav>
+    </header>
+    <section class="form1">
+        <p>
+            <h1>Se solicita un sistema de una tienda en el cual se debe solicitar el nombre, la marca, 
+                el tipo y el precio del producto. Si el producto es "papas" recibe un 2% de descuento,
+                si el producto es un "pastelito" recibe un 10% de descuento, si el producto es un
+                "lacteo" recibe un 7.5% de descuento en la compra, por lo cuál se deberá saber cuanto
+                debe de pagar el cliente por el concepto del producto.
+            </h1>
+        </p>
+    </section>
+    <section class="form">
+        <div class="main-container">
+            <div class="conainter-form">
+                <form name="formulario" method="get">
+                    <div class="ingreso1">
+                        <label>Nombre del producto: </label> 
+                        <br>
+                        <input type="text" name="producto" id="nombre" onkeypress="return validarL(event)">
+                        <br>
+                    </div>
+    
+                    <div class="ingreso2">
+                        <label>Marca del producto: </label>
+                        <br>
+                        <input type="text" name="Marca" id="marca" onkeypress="return validarL(event)">
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="ingreso3">
+                        <label>Tipo de producto: </label>
+                        <br>
+                        <input type="text" name="tipo" id="tipo" onkeypress="return validarL(event)">
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="ingreso4">
+                        <label>Precio del producto: </label>
+                        <input type="text" name="precio" id="precio" onkeypress="return validarn(event)">
+                        <br>
+                    </div>
+
+                    <div class="resultado">
+                        <label>Descuento: </label>
+                        <br>
+                        <input type="text" name="descuento" id="descuento" readonly="readonly">
+                    </div>
+                    <br>
+                    
+                    <div class="buttons">
+                        <input type="button" name="descuento" onclick="return ejercicio3()" value="Hacer descuento">
+                        <input type="reset" name="borrar" value="Borrar Datos">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <aside>
+        <img src="./imagenes/adornito3.jpg" width="100%">
+    </aside>
+</body>
+</html>

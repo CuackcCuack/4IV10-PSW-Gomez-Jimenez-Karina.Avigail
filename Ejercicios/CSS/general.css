@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-size: 100%;
+    color:rgb(189, 189, 189);
+    font-family:monospace;
+    font-size: large;
+}
+
+h1{
+    font-size: larger;
+}
+
+.btn-menu, .btn-menu label {
+    float: right;
+    cursor: pointer;
+}
+
+.form1{
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);;
+    align-content: center;
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 60%;
+}
+
+.form{
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);
+    display:block;
+    align-items: center;
+    margin: 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 60%;
+    position: absolute;
+}
+
+aside{
+    top: 3rem;
+    display: block;
+    background-color: rgb(41, 40, 40);
+    border: 2px solid rgb(110, 102, 88);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 20%;
+    right: 3rem;
+    position: absolute;
+}
+
+/*Botones, campos y letra*/
+.buttons input{
+    border-radius: 30px;
+    width: 160px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+}
+
+.ingreso1 input, .ingreso2 input, .resultado input, .ingreso3 input{
+    height: 25px;
+    width: 300px;
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+    background-color:rgb(150, 150, 150);
+}
+
+.ingreso4 input{
+    height: 25px;
+    width: 120px;
+    border: solid 2px rgb(70, 70, 70);
+    border-radius: 20px;
+    background-color:rgb(150, 150, 150);
+}

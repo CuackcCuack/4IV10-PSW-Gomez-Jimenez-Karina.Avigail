@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script src="./JS/validacion.js"></script>
+</head>
+<body background="./imagenes/fondoej1.jpg">
+    <header>
+        <nav class="btn-menu">
+            <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
+        </nav>
+    </header>
+    <section class="form1">
+        <p>
+            <h1>Suponga que un individuo desea invertir su capital en un banco y desea
+                saber cuanto dinero ganará después de un mes si el banco paga a razón de
+                8% mensual siendo el máximo de meses de 36.</h1>
+        </p>
+    </section>
+    <section class="form">
+        <div class="main-container">
+            <div class="conainter-form">
+                <form name="formulario" method="get" action="">
+                    <div class="ingreso1">
+                        <label>Cantidad a invertir:</label> 
+                        <br>
+                        <input type="text" id="inversion" onkeypress="return validarn(event)">
+                        <br>
+                    </div>
+    
+                    <div class="ingreso2">
+                        <label>Duración de la inversión: </label>
+                        <br>
+                        <input type="number" name="duracion" id="duracion" min="1" max="36" onkeypress="return validarn(event)">
+                        <br>
+                    </div>
+                    <br>
+
+                    <div class="resultado">
+                        <label>Ganará: </label>
+                        <br>
+                        <input type="text" name="resultado" id="resultado1" readonly="readonly">
+                    </div>
+                    <br>
+                    
+                    <div class="buttons">
+                        <input type="button" name="invertir" onclick="return ejercicio1()" value="Calcular inversión">
+                        <input type="reset" name="borrar" value="Borrar Datos">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <aside>
+        <img src="./imagenes/adornito1.jpg" width="100%">
+    </aside>
+</body>
+</html>
