@@ -318,30 +318,108 @@ function ejercicio8(){
 }
 
 function ejercicio9(){
-    var sueldo1 = document.getElementById("sueldo").value;
-    var horas1 = document.getElementById("horas").value;
-    
+    let salario = document.getElementById("sueldo").value;
+    let horasTrabajadas = document.getElementById("horas").value;
+    let horasSobrantes;
+    let horasDoble;
+    let horasTriple;
+    let pago;
+    let pagoExtra;
+    let pagoDoble;
+    let pagoTriple;
+    let pagoTotal;
     let lector = /\D/;
-    if(lector.test(horas1)){
-        alert("Ingrese un número entero de horas por favor")
-    }
-    else{
-        var sueldo = parseFloat(sueldo1);
-        var horas = parseInt(horas1);
-        if(1000000 >= sueldo && sueldo >= 0){
-            if(120 >= horas && horas >= 0){
-                
-            }
-            else{
-                alert("Ingrese una cantidad válida de horas, no creo que lo sobreexploten")
-            }
+  
+    if (
+      lector.test(salario) ||
+      lector.test(horasTrabajadas) ||
+      salario == 0 ||
+      horasTrabajadas == 0
+    ) {
+      alert("Ingresa datos validos");
+      return false;
+    } 
+    else {
+      if (horasTrabajadas > 40) {
+        pagoExtra = true;
+      } 
+      else {
+        pagoExtra = false;
+      }
+  
+      if (
+        salario > 0 &&
+        salario < 999999 &&
+        horasTrabajadas > 0 &&
+        horasTrabajadas < 100000
+      ) {
+        if (pagoExtra == true) {
+          horasSobrantes = horasTrabajadas - 40;
+          if (horasSobrantes > 8) {
+            horasTriple = horasSobrantes - 8;
+            horasDoble = horasSobrantes - horasTriple;
+            pagoDoble = horasDoble * (salario * 2);
+            pagoTriple = horasTriple * (salario * 3);
+            pago = 40 * salario;
+            pagoTotal = pago + pagoDoble + pagoTriple;
+          } 
+          else {
+            horasDoble = horasSobrantes;
+            pagoDoble = horasDoble * (salario * 2);
+            pago = 40 * salario;
+            pagoTotal = pago + pagoDoble;
+          }
+        } 
+        else {
+          pagoTotal = horasTrabajadas * salario;
         }
-        else{
-            alert("Ingrese una cantidad válida para el sueldo")
-        }
+        document.getElementById("salario").value = "$"+pagoTotal;
+      } 
+      else {
+        alert("Ingresa datos validos");
+        return false;
+      }
     }
 }
 
 function ejercicio10(){
+    var salario = parseInt(document.getElementById("salario").value);
+    var antiguedad = parseInt(document.getElementById("años").value);
     
+    let lector = /\D/;
+
+  if (lector.test(antiguedad)) {
+    alert("Ingresa una cantidad entera de años");
+    return false;
+  } else {
+    var utilidad;
+    var pago;
+    if (antiguedad > 0 && antiguedad < 50) {
+        if (salario > 0 && salario < 999999) {
+           if (antiguedad < 1) {
+           utilidad = 0.05;
+            } else if (antiguedad >= 1 && antiguedad <= 2) {
+            utilidad = 0.07;
+            } else if (antiguedad >= 2 && antiguedad <= 5) {
+            utilidad = 0.1;
+            } else if (antiguedad >= 5 && antiguedad <= 10) {
+            utilidad = 0.15;
+            } else if (antiguedad > 10) {
+            utilidad = 0.2;
+            }
+            pago = salario * utilidad;
+            document.getElementById("utilidad").value = "$"+pago;
+        } 
+        else {
+            alert("Ingresa un salario válido");
+            return false;
+        } 
+    }
+    else {
+        alert("Ingresa años válidos");
+        return false;
+    }
+  }
 }
+
+//SE LOGRÓ JAJAJAJJAJA

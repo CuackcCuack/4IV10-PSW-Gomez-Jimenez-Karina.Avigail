@@ -8,45 +8,74 @@
     <link rel="stylesheet" href="./CSS/general.css">
     <script src="./JS/validacion.js"></script>
 </head>
-<body background="">
+<body background="./imagenes/fondoej10.jpg">
     <header>
         <nav class="btn-menu">
             <a href="./principal.html"><img src="./imagenes/menu.png" width="40px"></a>
         </nav>
     </header>
     <section class="form1">
-        <p>
-            <h1></h1>
-        </p>
+        <div class="tabla">
+            <h1>Calcular la utilidad que un trabajador recibe en el reparto anual de
+                utilidades si este se le asigna como un porcentaje de su salario mensual
+                que depende de su antigüedad en la empresa de acuerdo con la siguiente
+                tabla:
+            </h1>
+            <br>
+            <table>
+                <tr>
+                  <th>Tiempo</th>
+                  <th>Utilidad</th>
+                </tr>
+                <tr>
+                  <td>Menos de 1 año</td>
+                  <td>5% del salario</td>
+                </tr>
+                <tr>
+                  <td>1 año o más y menos de 2 años</td>
+                  <td>7% del salario</td>
+                </tr>
+                <tr>
+                  <td>2 años o más y menos de 5 años</td>
+                  <td>10% del salario</td>
+                  <tr>
+                    <td>5 años o más y menos de 10 años</td>
+                    <td>15% del salario</td>
+                  </tr>
+                  <tr>
+                    <td>10 años o más</td>
+                    <td>20% del salario</td>
+              </table>
+        </div>
     </section>
     <section class="form">
         <div class="main-container">
             <div class="conainter-form">
                 <form name="formulario" method="get">
                     <div class="ingreso1">
-                        <label></label> 
+                        <label>Ingresa tu salario:</label> 
                         <br>
-                        <input type="text" id="" onkeypress="">
+                        <input type="text" id="salario" onkeypress="return validarn(event)">
                         <br>
                     </div>
     
                     <div class="ingreso2">
-                        <label></label>
+                        <label>Ingresa tus años trabajando aquí</label>
                         <br>
-                        <input type="text" name="" id="" onkeypress="">
+                        <input type="number" min="0" max="50" id="años" onkeypress="return validarn(event)">
                         <br>
                     </div>
                     <br>
 
                     <div class="resultado">
-                        <label> </label>
+                        <label>Tu utilidad será de: </label>
                         <br>
-                        <input type="text" name="" id="" readonly="readonly">
+                        <input type="text" name="resultado" id="utilidad" readonly="readonly">
                     </div>
                     <br>
                     
                     <div class="buttons">
-                        <input type="button" name="" onclick="" value="">
+                        <input type="button" name="final" onclick="return ejercicio10()" value="Ver mi utilidad">
                         <input type="reset" name="borrar" value="Borrar Datos">
                     </div>
                 </form>
@@ -54,7 +83,7 @@
         </div>
     </section>
     <aside>
-        <img src="" width="100%">
+        <img src="./imagenes/adornito10.jpg" width="100%">
     </aside>
 </body>
 </html>

@@ -85,3 +85,10 @@ aside{
     border-radius: 20px;
     background-color:rgb(150, 150, 150);
 }
+
+.tabla table{
+    width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: solid 1px #eee;
+}
