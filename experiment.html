@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultados"></div>
+    <button id="mostrarResultados">Mostrar resultados</button>
+    <script>
+        const boton = document.getElementById('mostrarResultados');
+        boton.addEventListener('click', mostrarTabla);
+      
+        function mostrarTabla() {
+          const resultados = document.getElementById('resultados');
+          const tabla = document.createElement('table');
+          const filaEncabezado = tabla.insertRow();
+          const celda1 = filaEncabezado.insertCell();
+          const celda2 = filaEncabezado.insertCell();
+          celda1.innerText = 'Nombre';
+          celda2.innerText = 'Edad';
+          const fila1 = tabla.insertRow();
+          const celdaNombre1 = fila1.insertCell();
+          const celdaEdad1 = fila1.insertCell();
+          celdaNombre1.innerText = 'Juan';
+          celdaEdad1.innerText = '30';
+          const fila2 = tabla.insertRow();
+          const celdaNombre2 = fila2.insertCell();
+          const celdaEdad2 = fila2.insertCell();
+          celdaNombre2.innerText = 'María';
+          celdaEdad2.innerText = '25';
+          resultados.appendChild(tabla);
+        }
+      </script>
+      
+</body>
+</html>

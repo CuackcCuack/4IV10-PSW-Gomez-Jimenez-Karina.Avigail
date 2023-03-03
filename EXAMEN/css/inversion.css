@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #008080;
+  }
+  
+  .prestamo{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+    }
+
+  form {
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .result input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  input[type="button"] {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #006666;
+  }
+
+  input[type="reset"] {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  input[type="reset"]:hover {
+    background-color: #006666;
+  }
+  
+  #tabla {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  #tabla th,
+  #tabla td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  #tabla th {
+    background-color: #008080;
+    color: #fff;
+  }

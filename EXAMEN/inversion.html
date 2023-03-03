@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="./css/inversion.css">
+</head>
+<body>
+    <h1>Calculadora de interés compuesto para invertir en un terreno en la playa</h1>
+    <form method="get" name="input" class="prestamo">
+        <div class="monto">
+            <label>Monto del préstamo anual:</label>
+            <input placeholder="Ingrese una cantidad" type="number" id="prestamo" name="prestamo" min="0" step="1000" mas="10000000" onkeypress="return validarn(event)">
+        </div>
+        <br>
+
+        <div class="interes">
+            <label>Porcentaje de interés anual:</label>
+            <input placeholder="Ingrese un porcentaje de interés expresado en decimales" type="number" id="interes" name="interes" min="0" max="1" step="0.01" onkeypress="return validarn(event)">
+        </div>
+        <br>
+        
+        <div class="capitalizacion">
+            <label>¿Cada cuántos meses se va a capitalizar?:</label>
+            <input placeholder="Por ejemplo, si se capitaliza trimestralmente, ingrese 3 meses" type="number" id="capitalizacion" name="capitalizacion" min="1" max="12" onkeypress="return validarn(event)">
+        </div>
+        <br>
+
+        <div class="tiempo">
+            <label>Cantidad de años para invertir:</label>
+            <input placeholder="Ingrese los años de inversión" type="number" id="años" name="años" min="1" max="20" onkeypress="return validarn(event)">
+        </div>
+        <br>
+
+        <div class="result">
+            <br>
+            <input placeholder="Aquí aparecerá el capital final a pagar" type="text" name="resultado" id="resultado" readonly="readonly">
+        </div>
+        <br>
+
+        <input type="button" value="Calcular" onclick="return calcular()">
+        <input type="reset" id="borrar" value="Borrar Datos">
+        </form>
+
+   <div class="prestamo" id="tabla">
+    <table>
+        <thead>
+          <tr><h5>
+            <th>Num. Pago</th>
+            <th>Prestamo</th>
+            <th>Intereses</th>
+            <th>Abono del capital</th>
+            <th>Cuota</th>
+            <th>Saldo Final</th>
+          </h5></tr>
+        </thead>
+        <tbody id="table">
+            <tr>
+                <td><pre id="noPago"></pre></td>
+                <td><pre id="prestamo"></pre></td>
+                <td><pre id="interes"></pre></td>
+                <td><pre id="pago"></pre></td>
+                <td><pre id="cuota"></pre></td>
+                <td><pre id="restante"></pre></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Total</td>
+                <td><pre id="totalIntereses"></pre></td>
+                <td><pre id="totalPago"></pre></td>
+                <td><pre id="totalCuota"></pre></td>
+                <td></td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./js/datitos.js"></script>
+</body>
+</html>
