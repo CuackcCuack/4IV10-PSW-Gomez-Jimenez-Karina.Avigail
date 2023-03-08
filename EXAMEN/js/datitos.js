@@ -8,10 +8,10 @@ function validarn(e){
 }
 
 function calcular(){
-    const prestamo = document.getElementById('prestamo').value;
-    const interes = document.getElementById('interes').value;
-    const años = document.getElementById('años').value;
-    const capitalizaciones = document.getElementById('capitalizacion').value;
+    let prestamo = document.getElementById('prestamo').value;
+    let interes = document.getElementById('interes').value;
+    let años = document.getElementById('años').value;
+    let capitalizaciones = document.getElementById('capitalizacion').value;
 
  if(prestamo!=""){
         if(prestamo > 0){
@@ -38,13 +38,13 @@ function calcular(){
                                                     let tiempo;
                                                     let intereses = 0;
                                                     let cuota = 0;
-                                                    let saldoPendiente;
-                                                    let fin;
-                                                    let restante = prestamo;
+                                                    let saldoPendiente = prestamo;
                                                     let cuotaI = "";
                                                     let interesI = "";
                                                     let restanteI = "";
                                                     let montoI = "";
+                                                    let final;
+                                                    let finalI = "";
 
                                                     let CapitalFinal = prestamo*[(1+InteresMensual)**periodo];
                                                     document.getElementById("resultado").value = CapitalFinal;
@@ -52,15 +52,18 @@ function calcular(){
                                                     for (let i = 1; i <= numPagos; i++) {
                                                         intereses = saldoPendiente * tasaMensual;
                                                         cuota = intereses + monto;
-                                                        saldoPendiente = prestamo - monto;
-                                                        restante  = saldoPendiente;
 
                                                         tiempo += i + 1 + "\n";
-                                                        restanteI += "$" + restante.toFixed(2) + "\n";
+                                                        restanteI += "$" + saldoPendiente.toFixed(2) + "\n";
                                                         montoI += "$" + monto.toFixed(2) + "\n";
                                                         cuotaI += "$" + cuota.toFixed(2) + "\n";
                                                         interesI += "$" + intereses.toFixed(2) + "\n";
 
+                                                        saldoPendiente = prestamo - monto;
+                                                        prestamo = saldoPendiente;
+                                                        final = saldoPendiente;
+                                                        finalI += "$" + Math.abs(final.toFixed(2)) + "\n";
+                                                        
                                                         totalInteres += intereses;
                                                         totalPago = monto * numPagos;
                                                         totalCuota += cuota;
@@ -70,7 +73,7 @@ function calcular(){
                                                     document.getElementById("pago").textContent = montoI;
                                                     document.getElementById("cuota").textContent = cuotaI;
                                                     document.getElementById("noPago").textContent = tiempo;
-                                                    document.getElementById("restante").textContent = fin;
+                                                    document.getElementById("restante").textContent = finalI;
                                                     document.getElementById("totalIntereses").textContent =
                                                         "$" + totalInteres.toFixed(2);
                                                         document.getElementById("totalPago").textContent =

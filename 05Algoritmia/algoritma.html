@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios de Algoritmia</title>
 </head>
+<link rel="stylesheet" href="./css/style.css">
 <body>
     <div class="container">
         
@@ -18,8 +19,9 @@
             </h3>
             <div class="problema-content">
                 <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por un espacio: " id="p1-input">
-                <button type="button" class="problema-button" onclick="" style="margin-top: 1rem;">Invertir palabras</button>
+                <button type="button" class="problema-button" onclick="return problema1()" style="margin-top: 1rem;">Invertir palabras</button>
                 <pre class="problema-output" id="p1-output">Esperando datos...</pre>
+                
             </div>
         </div>
 
@@ -101,7 +103,7 @@
                         </tbody>
                     </table>
                 </div>
-                <button type="button" class="problema-button" onclick="" style="margin-top: 1rem;">Calcular vector</button>
+                <button type="button" class="problema-button" onclick="return problema2()" style="margin-top: 1rem;">Calcular vector</button>
                 <pre class="problema-output" id="p2-output">Esperando datos...</pre>
             </div>
         </div>
@@ -121,9 +123,10 @@
         </h3>
         <div class="problema-content">
             <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma: " id="p3-input">
-            <button type="button" class="problema-button" onclick="" style="margin-top: 1rem;">Contar letras</button>
+            <button type="button" class="problema-button" onclick="return problema3()" style="margin-top: 1rem;">Contar letras</button>
             <pre class="problema-output" id="p3-output">Esperando datos...</pre>
         </div>
     </div>
+    <script src="./js/logica.js"></script>
 </body>
 </html>
